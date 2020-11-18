@@ -73,6 +73,19 @@ namespace FizzBuzzTest
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void Should_Return_FizzBuzzWhizz_Given_3_5_7()
+        {
+            //given
+            string expected = "FizzBuzzWhizz";
+
+            //when
+            string actual = fizzbuzz.Say(3 * 5 * 7);
+
+            //then
+            Assert.Equal(expected, actual);
+        }
+
         //[Fact]
         //public void Should_be_mocked()
         //{

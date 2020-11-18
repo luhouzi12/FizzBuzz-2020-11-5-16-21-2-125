@@ -19,6 +19,11 @@ namespace FizzBuzz
                 word += "Buzz";
             }
 
+            if (count % 7 == 0)
+            {
+                word += "Whizz";
+            }
+
             return !string.Equals(word, string.Empty) ? word : count.ToString();
         }
     }
