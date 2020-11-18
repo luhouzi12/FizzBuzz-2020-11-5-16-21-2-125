@@ -6,6 +6,8 @@ namespace FizzBuzzTest
 {
     public class FizzBuzzTest
     {
+        private readonly FizzBuzz.FizzBuzz fizzbuzz = new FizzBuzz.FizzBuzz();
+
         [Fact]
         public void Should_Return_1_Given_1()
         {
@@ -13,7 +15,7 @@ namespace FizzBuzzTest
             string expected = "1";
 
             //when
-            string actual = FizzBuzz.FizzBuzz.Say(1);
+            string actual = fizzbuzz.Say(1);
 
             //then
             Assert.Equal(expected, actual);
@@ -26,7 +28,33 @@ namespace FizzBuzzTest
             string expected = "2";
 
             //when
-            string actual = FizzBuzz.FizzBuzz.Say(2);
+            string actual = fizzbuzz.Say(2);
+
+            //then
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Should_Return_Fizz_Given_3()
+        {
+            //given
+            string expected = "Fizz";
+
+            //when
+            string actual = fizzbuzz.Say(3);
+
+            //then
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Should_Return_Buzz_Given_5()
+        {
+            //given
+            string expected = "Buzz";
+
+            //when
+            string actual = fizzbuzz.Say(5);
 
             //then
             Assert.Equal(expected, actual);
