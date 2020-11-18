@@ -60,6 +60,19 @@ namespace FizzBuzzTest
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void Should_Return_FizzBuzz_Given_15()
+        {
+            //given
+            string expected = "FizzBuzz";
+
+            //when
+            string actual = fizzbuzz.Say(15);
+
+            //then
+            Assert.Equal(expected, actual);
+        }
+
         //[Fact]
         //public void Should_be_mocked()
         //{

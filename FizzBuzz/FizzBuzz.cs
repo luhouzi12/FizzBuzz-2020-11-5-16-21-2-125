@@ -8,17 +8,18 @@ namespace FizzBuzz
     {
         public string Say(int count)
         {
+            string word = string.Empty;
             if (count % 3 == 0)
             {
-                return "Fizz";
+                word += "Fizz";
             }
 
             if (count % 5 == 0)
             {
-                return "Buzz";
+                word += "Buzz";
             }
 
-            return count.ToString();
+            return !string.Equals(word, string.Empty) ? word : count.ToString();
         }
     }
 }
