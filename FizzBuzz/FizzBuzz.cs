@@ -8,6 +8,13 @@ namespace FizzBuzz
     {
         public string Say(int count)
         {
+            string word = EditWord(count);
+
+            return !string.Equals(word, string.Empty) ? word : count.ToString();
+        }
+
+        private static string EditWord(int count)
+        {
             string word = string.Empty;
             if (count % 3 == 0)
             {
@@ -24,7 +31,7 @@ namespace FizzBuzz
                 word += "Whizz";
             }
 
-            return !string.Equals(word, string.Empty) ? word : count.ToString();
+            return word;
         }
     }
 }
