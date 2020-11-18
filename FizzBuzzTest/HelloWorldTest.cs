@@ -4,35 +4,34 @@ using Xunit;
 
 namespace FizzBuzzTest
 {
-    public class HelloWorldTest
+    public class FizzBuzzTest
     {
         [Fact]
-        public void Hello_world_test()
+        public void Should_Return_1_Given_1()
         {
             //given
-            Dependency dependency = new Dependency();
-            HelloWorld helloWorld = new HelloWorld(dependency);
+            string expected = "1";
 
             //when
-            string actual = helloWorld.BeenCalled();
+            string actual = FizzBuzz.FizzBuzz.Say(1);
 
             //then
-            Assert.Equal("Leave me alone.", actual);
+            Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void Should_be_mocked()
-        {
-            //given
-            var mockDependencu = new Mock<Dependency>();
-            mockDependencu.Setup(m => m.Say()).Returns("Hello World");
-            HelloWorld helloWorld = new HelloWorld(mockDependencu.Object);
+        //[Fact]
+        //public void Should_be_mocked()
+        //{
+        //    //given
+        //    var mockDependencu = new Mock<Dependency>();
+        //    mockDependencu.Setup(m => m.Say()).Returns("Hello World");
+        //    HelloWorld helloWorld = new HelloWorld(mockDependencu.Object);
 
-            //when
-            string actual = helloWorld.BeenCalled();
+        //    //when
+        //    string actual = helloWorld.BeenCalled();
 
-            //then
-            Assert.Equal("Hello World", actual);
-        }
+        //    //then
+        //    Assert.Equal("Hello World", actual);
+        //}
     }
 }
